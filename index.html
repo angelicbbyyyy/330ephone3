@@ -26,6 +26,23 @@
   <script src="script.js" defer="defer"></script>
 </head>
 <body>
+  <script>
+    localStorage.setItem('ephonePinActivated', 'true');
+    localStorage.setItem('ephone_saved_uid', 'default');
+    
+    // Safety fallback just in case the modal tries to show anyway
+    const originalGetItem = localStorage.getItem;
+    localStorage.getItem = function(key) {
+      if (key === 'ephonePinActivated') return 'true';
+      if (key === 'ephone_saved_uid') return 'default';
+      return originalGetItem.call(this, key);
+    };
+    
+    // Automatically hide modal via CSS
+    const style = document.createElement('style');
+    style.textContent = '#pin-modal-overlay, #login-overlay { display: none !important; }';
+    document.head.appendChild(style);
+  </script>
   <div id="phone-screen">
     <div id="status-bar"> <span id="status-bar-time">12:00</span>
       <div id="status-bar-battery" class="battery-container"> <span class="battery-text">--%</span>
