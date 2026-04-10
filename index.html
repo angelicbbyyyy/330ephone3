@@ -109,10 +109,10 @@
                 <div class="profile-info">
                   <p id="profile-username" class="editable-text">@ insonneve 🪦</p>
                   <p id="profile-sub-username" class="editable-text">@ insonneve</p>
-                  <p id="profile-bio" class="editable-text">你好像过得很好 迫不及待的抹去我存在的痕迹</p>
+                  <p id="profile-bio" class="editable-text">You seem to be doing well, eager to erase every trace of me.</p>
                   <p id="profile-location" class="editable-text"> <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5-2.5-1.12 2.5-2.5 2.5z"></path>
-                    </svg> <span>北海道</span> </p>
+                    </svg> <span>Hokkaido</span> </p>
                 </div>
               </div>
               <div id="desktop-layout">
@@ -2431,36 +2431,36 @@
                       <label><input type="radio" name="theme-select" value="blue_green"> Blue / Green</label>
                       <label><input type="radio" name="theme-select" value="pink_white"> Pink / White</label>
                       <label><input type="radio" name="theme-select" value="pink_black"> Pink / Black</label>
-                      <label><input type="radio" name="theme-select" value="pink_green"> 粉绿</label>
-                      <label><input type="radio" name="theme-select" value="green_black"> 绿黑</label>
+                      <label><input type="radio" name="theme-select" value="pink_green"> Pink / Green</label>
+                      <label><input type="radio" name="theme-select" value="green_black"> Green / Black</label>
                       
-                      <button id="reset-theme-btn" class="settings-text-btn" style="margin-left: auto;">重置默认</button>
+                      <button id="reset-theme-btn" class="settings-text-btn" style="margin-left: auto;">Reset Default</button>
                  </div>
             </div>
 
             <div class="settings-item">
-                 <label>字体大小 <span id="font-size-value" style="color:#888; font-size:12px;">13px</span></label>
+                 <label>Font Size <span id="font-size-value" style="color:#888; font-size:12px;">13px</span></label>
                  <div class="settings-right" style="width: 50%;">
                     <input type="range" id="font-size-slider" min="12" max="20" step="1" style="width:100%;">
                  </div>
             </div>
             
             <div class="settings-item-block">
-                 <label>自定义 CSS <button id="reset-custom-css-btn" style="float:right; font-size:12px;">重置</button></label>
-                 <textarea id="custom-css-input" rows="3" class="settings-textarea" placeholder="/* 针对当前聊天的CSS */"></textarea>
+                 <label>Custom CSS <button id="reset-custom-css-btn" style="float:right; font-size:12px;">Reset</button></label>
+                 <textarea id="custom-css-input" rows="3" class="settings-textarea" placeholder="/* CSS for the current chat */"></textarea>
             </div>
 
             <div class="settings-item-block">
-                <label>效果预览</label>
+                <label>Preview</label>
                 <div id="settings-preview-area" style="margin-top:10px;"></div>
             </div>
             
             <div class="settings-item-block" id="lyrics-position-group" style="display: none;">
-                 <label>歌词栏设置</label>
+                 <label>Lyrics Bar Settings</label>
                  <div style="display:flex; gap:10px; margin-top:10px;">
-                     <select id="lyrics-vertical-pos" class="settings-select"><option value="top">顶部</option><option value="bottom">底部</option></select>
-                     <select id="lyrics-horizontal-pos" class="settings-select"><option value="center">居中</option><option value="left">居左</option><option value="right">居右</option></select>
-                     <input type="number" id="lyrics-offset-input" class="settings-num-input" value="10" placeholder="偏移">
+                     <select id="lyrics-vertical-pos" class="settings-select"><option value="top">Top</option><option value="bottom">Bottom</option></select>
+                     <select id="lyrics-horizontal-pos" class="settings-select"><option value="center">Center</option><option value="left">Left</option><option value="right">Right</option></select>
+                     <input type="number" id="lyrics-offset-input" class="settings-num-input" value="10" placeholder="Offset">
                  </div>
             </div>
         </div>
@@ -2468,17 +2468,17 @@
         <!-- 第六组：数据与操作 (底部) -->
         <div class="settings-section">
              <div class="settings-item clickable" id="search-history-btn">
-                 <label>查找聊天记录</label>
+                 <label>Search Chat History</label>
                  <div class="settings-right">›</div>
              </div>
              
              <div class="settings-item clickable" id="export-single-chat-btn">
-                 <label>导出聊天记录</label>
+                 <label>Export Chat History</label>
                  <div class="settings-right">›</div>
              </div>
              
              <div class="settings-item clickable" id="import-single-chat-btn">
-                 <label>导入聊天记录</label>
+                 <label>Import Chat History</label>
                  <div class="settings-right">
                      ›
                      <input type="file" id="import-single-chat-input" accept="application/json" hidden>
@@ -2486,12 +2486,12 @@
              </div>
 
              <div class="settings-item clickable" id="clear-chat-btn">
-                 <label style="color: #ff3b30;">清空聊天记录</label>
+                 <label style="color: #ff3b30;">Clear Chat History</label>
                  <div class="settings-right">›</div>
              </div>
              
              <div class="settings-item clickable" id="block-chat-btn">
-                 <label style="color: #ff3b30;">拉黑对方 / 移出群聊</label>
+                 <label style="color: #ff3b30;">Block User / Remove from Group</label>
                  <div class="settings-right">›</div>
              </div>
         </div>
@@ -2793,7 +2793,7 @@
     <div id="gr-sidebar-overlay" onclick="closeChapterList()"></div>
     <div id="gr-chapter-sidebar">
         <div class="gr-sidebar-header">
-            <span>目录 Contents</span>
+            <span>Contents</span>
             <span id="gr-total-chapters" style="font-size:12px; color:#888;">0 chapters total</span>
         </div>
         <div id="gr-chapter-list-content">
@@ -3063,47 +3063,47 @@
   </div>
   <div id="persona-editor-modal" class="modal">
     <div class="modal-content">
-      <div class="modal-header"><span id="persona-editor-title">添加人设预设</span></div>
+      <div class="modal-header"><span id="persona-editor-title">Add Persona Preset</span></div>
       <div class="modal-body">
-        <div class="form-group"><label>预设头像</label>
-          <div class="avatar-upload"><img id="preset-avatar-preview"><button onclick="document.getElementById('preset-avatar-input').click()">上传头像</button><input type="file" id="preset-avatar-input" accept="image/*"></div>
+        <div class="form-group"><label>Preset Avatar</label>
+          <div class="avatar-upload"><img id="preset-avatar-preview"><button onclick="document.getElementById('preset-avatar-input').click()">Upload Avatar</button><input type="file" id="preset-avatar-input" accept="image/*"></div>
         </div>
-        <div class="form-group"><label for="preset-persona-input">预设人设</label><textarea id="preset-persona-input" rows="4" placeholder="在此输入这个人设的详细设定..."></textarea></div>
+        <div class="form-group"><label for="preset-persona-input">Preset Persona</label><textarea id="preset-persona-input" rows="4" placeholder="Enter the detailed persona settings here..."></textarea></div>
       </div>
-      <div class="modal-footer"><button class="cancel" id="cancel-persona-editor-btn"data-lang-key="cancel">取消</button><button class="save" id="save-persona-preset-btn"data-lang-key="save">保存</button></div>
+      <div class="modal-footer"><button class="cancel" id="cancel-persona-editor-btn"data-lang-key="cancel">Cancel</button><button class="save" id="save-persona-preset-btn"data-lang-key="save">Save</button></div>
     </div>
   </div>
   <div id="member-settings-modal" class="modal">
     <div class="modal-content">
-      <div class="modal-header"><span data-lang-key="edit">编辑群成员</span></div>
+      <div class="modal-header"><span data-lang-key="edit">Edit Group Member</span></div>
       <div class="modal-body">
-        <div class="form-group"><label for="member-name-input">名字</label><input type="text" id="member-name-input"></div>
-        <div class="form-group"><label for="member-persona-input">人设</label><textarea id="member-persona-input" rows="4"></textarea></div>
-        <div class="form-group"><label>头像</label>
-          <div class="avatar-upload"><img id="member-avatar-preview"><button onclick="document.getElementById('member-avatar-input').click()">上传头像</button><button class="change-frame-btn" data-type="member">更换头像框</button><input type="file" id="member-avatar-input" accept="image/*"></div>
+        <div class="form-group"><label for="member-name-input">Name</label><input type="text" id="member-name-input"></div>
+        <div class="form-group"><label for="member-persona-input">Persona</label><textarea id="member-persona-input" rows="4"></textarea></div>
+        <div class="form-group"><label>Avatar</label>
+          <div class="avatar-upload"><img id="member-avatar-preview"><button onclick="document.getElementById('member-avatar-input').click()">Upload Avatar</button><button class="change-frame-btn" data-type="member">Change Avatar Frame</button><input type="file" id="member-avatar-input" accept="image/*"></div>
         </div>
       </div>
-      <div class="modal-footer"><button class="cancel" id="cancel-member-settings-btn"data-lang-key="cancel">取消</button><button class="save" id="save-member-settings-btn"data-lang-key="save">保存</button></div>
+      <div class="modal-footer"><button class="cancel" id="cancel-member-settings-btn"data-lang-key="cancel">Cancel</button><button class="save" id="save-member-settings-btn"data-lang-key="save">Save</button></div>
     </div>
   </div>
   <div id="custom-modal-overlay">
     <div id="custom-modal">
       <div class="custom-modal-header" id="custom-modal-title"></div>
       <div class="custom-modal-body" id="custom-modal-body"></div>
-      <div class="custom-modal-footer"> <button id="custom-modal-cancel"data-lang-key="cancel">取消</button> <button id="custom-modal-confirm" class="confirm-btn"data-lang-key="confirm">确定</button> </div>
+      <div class="custom-modal-footer"> <button id="custom-modal-cancel"data-lang-key="cancel">Cancel</button> <button id="custom-modal-confirm" class="confirm-btn"data-lang-key="confirm">Confirm</button> </div>
     </div>
   </div>
   <div id="preset-actions-modal" class="modal">
     <div id="custom-modal" style="width: 250px;">
-      <div class="custom-modal-footer"> <button id="preset-action-edit" data-lang-key="edit">编辑预设</button> <button id="preset-action-delete" class="btn-danger">删除预设</button> <button id="preset-action-cancel" style="margin-top: 8px; border-radius: 8px; background-color: #f0f0f0;"data-lang-key="cancel">取消</button> </div>
+      <div class="custom-modal-footer"> <button id="preset-action-edit" data-lang-key="edit">Edit Preset</button> <button id="preset-action-delete" class="btn-danger">Delete Preset</button> <button id="preset-action-cancel" style="margin-top: 8px; border-radius: 8px; background-color: #f0f0f0;"data-lang-key="cancel">Cancel</button> </div>
     </div>
   </div>
   <div id="transfer-modal">
     <div class="transfer-content">
-      <div class="transfer-header">给Ta一个惊喜！</div>
-      <div class="transfer-input-group"> <label for="transfer-amount">转账金额</label> <input type="number" id="transfer-amount" placeholder="0.00" min="0" step="0.01"> </div>
-      <div class="transfer-input-group"> <label for="transfer-note">备注 (可选)</label> <input type="text" id="transfer-note" placeholder="留下你的小心思~" maxlength="20"> </div>
-      <div class="transfer-actions"> <button id="transfer-cancel-btn" data-lang-key="cancel">取消</button> <button id="transfer-confirm-btn">确认转账</button> </div>
+      <div class="transfer-header">Send them a surprise!</div>
+      <div class="transfer-input-group"> <label for="transfer-amount">Transfer Amount</label> <input type="number" id="transfer-amount" placeholder="0.00" min="0" step="0.01"> </div>
+      <div class="transfer-input-group"> <label for="transfer-note">Note (optional)</label> <input type="text" id="transfer-note" placeholder="Leave a short message~" maxlength="20"> </div>
+      <div class="transfer-actions"> <button id="transfer-cancel-btn" data-lang-key="cancel">Cancel</button> <button id="transfer-confirm-btn">Confirm Transfer</button> </div>
     </div>
   </div>
   <div id="battery-alert-modal">
@@ -3113,46 +3113,46 @@
   </div>
   <div id="waimai-request-modal" class="modal">
     <div class="modal-content" style="width: 290px;">
-      <div class="modal-header"> <span>发起外卖订单</span> </div>
+      <div class="modal-header"> <span>Create Takeout Order</span> </div>
       <div class="modal-body">
-        <div class="form-group"> <label for="waimai-product-info">商品信息</label> <input type="text" id="waimai-product-info" placeholder="例如：一杯杨枝甘露"> </div>
-        <div class="form-group"> <label for="waimai-amount">订单金额 (元)</label> <input type="number" id="waimai-amount" placeholder="例如：21" min="0" step="0.01"> </div>
+        <div class="form-group"> <label for="waimai-product-info">Item Details</label> <input type="text" id="waimai-product-info" placeholder="For example: a mango pomelo drink"> </div>
+        <div class="form-group"> <label for="waimai-amount">Order Amount (CNY)</label> <input type="number" id="waimai-amount" placeholder="For example: 21" min="0" step="0.01"> </div>
       </div>
-      <div class="modal-footer"> <button class="save" id="waimai-order-for-ai-btn">为TA点单</button> <button class="save" id="waimai-confirm-btn">发起请求</button> </div>
+      <div class="modal-footer"> <button class="save" id="waimai-order-for-ai-btn">Order for Them</button> <button class="save" id="waimai-confirm-btn">Send Request</button> </div>
     </div>
   </div>
   <div id="create-countdown-modal" class="modal">
     <div class="modal-content" style="height: auto;">
-      <div class="modal-header"> <span>新建约定</span> </div>
+      <div class="modal-header"> <span>Create New Countdown</span> </div>
       <div class="modal-body">
-        <div class="form-group"> <label for="countdown-title-input">约定标题</label> <input type="text" id="countdown-title-input" placeholder="例如：我的生日"> </div>
-        <div class="form-group"> <label for="countdown-date-input">约定日期与时间</label> <input type="datetime-local" id="countdown-date-input"> </div>
+        <div class="form-group"> <label for="countdown-title-input">Countdown Title</label> <input type="text" id="countdown-title-input" placeholder="For example: My birthday"> </div>
+        <div class="form-group"> <label for="countdown-date-input">Date and Time</label> <input type="datetime-local" id="countdown-date-input"> </div>
       </div>
-      <div class="modal-footer"> <button class="cancel" id="cancel-create-countdown-btn"data-lang-key="cancel">取消</button> <button class="save" id="confirm-create-countdown-btn"data-lang-key="save">保存约定</button> </div>
+      <div class="modal-footer"> <button class="cancel" id="cancel-create-countdown-btn"data-lang-key="cancel">Cancel</button> <button class="save" id="confirm-create-countdown-btn"data-lang-key="save">Save Countdown</button> </div>
     </div>
   </div>
   <div id="red-packet-modal" class="modal">
     <div class="modal-content" style="width: 300px; height: auto;">
-      <div class="modal-header"> <span>发红包</span> </div>
+      <div class="modal-header"> <span>Send Red Packet</span> </div>
       <div class="modal-body" style="padding: 0;">
         <div class="frame-tabs">
-          <div id="rp-tab-group" class="frame-tab active">拼手气红包</div>
-          <div id="rp-tab-direct" class="frame-tab">专属红包</div>
+          <div id="rp-tab-group" class="frame-tab active">Random Split Packet</div>
+          <div id="rp-tab-direct" class="frame-tab">Direct Packet</div>
         </div>
         <div id="rp-content-group" class="frame-content" style="padding: 20px 15px;">
-          <div class="form-group"> <label>总金额 (元)</label> <input type="number" id="rp-group-amount" placeholder="0.00"> </div>
-          <div class="form-group"> <label>红包个数</label> <input type="number" id="rp-group-count" placeholder="填写红包个数"> </div>
-          <div class="form-group"> <label>祝福语</label> <input type="text" id="rp-group-greeting" placeholder="恭喜发财，大吉大利！"> </div>
-          <p id="rp-group-total" style="text-align: center; font-size: 24px; font-weight: bold; margin: 10px 0;">¥ 0.00</p> <button id="send-group-packet-btn" class="form-button">塞钱进红包</button>
+          <div class="form-group"> <label>Total Amount (CNY)</label> <input type="number" id="rp-group-amount" placeholder="0.00"> </div>
+          <div class="form-group"> <label>Number of Packets</label> <input type="number" id="rp-group-count" placeholder="Enter number of packets"> </div>
+          <div class="form-group"> <label>Greeting</label> <input type="text" id="rp-group-greeting" placeholder="Wishing you prosperity and luck!"> </div>
+          <p id="rp-group-total" style="text-align: center; font-size: 24px; font-weight: bold; margin: 10px 0;">¥ 0.00</p> <button id="send-group-packet-btn" class="form-button">Send Red Packet</button>
         </div>
         <div id="rp-content-direct" class="frame-content" style="display: none; padding: 20px 15px;">
-          <div class="form-group"> <label>发送给</label> <select id="rp-direct-receiver"></select> </div>
-          <div class="form-group"> <label>金额 (元)</label> <input type="number" id="rp-direct-amount" placeholder="0.00"> </div>
-          <div class="form-group"> <label>祝福语</label> <input type="text" id="rp-direct-greeting" placeholder="恭喜发财，大吉大利！"> </div>
-          <p id="rp-direct-total" style="text-align: center; font-size: 24px; font-weight: bold; margin: 10px 0;">¥ 0.00</p> <button id="send-direct-packet-btn" class="form-button">塞钱进红包</button>
+          <div class="form-group"> <label>Send To</label> <select id="rp-direct-receiver"></select> </div>
+          <div class="form-group"> <label>Amount (CNY)</label> <input type="number" id="rp-direct-amount" placeholder="0.00"> </div>
+          <div class="form-group"> <label>Greeting</label> <input type="text" id="rp-direct-greeting" placeholder="Wishing you prosperity and luck!"> </div>
+          <p id="rp-direct-total" style="text-align: center; font-size: 24px; font-weight: bold; margin: 10px 0;">¥ 0.00</p> <button id="send-direct-packet-btn" class="form-button">Send Red Packet</button>
         </div>
       </div>
-      <div class="modal-footer" style="justify-content: center;"> <button class="cancel" id="cancel-red-packet-btn" style="width: 100%;"data-lang-key="cancel">取消</button> </div>
+      <div class="modal-footer" style="justify-content: center;"> <button class="cancel" id="cancel-red-packet-btn" style="width: 100%;"data-lang-key="cancel">Cancel</button> </div>
     </div>
   </div>
   <div id="red-packet-details-modal" class="modal">
@@ -3160,12 +3160,12 @@
       <div class="modal-header" style="background-color: #F96259; color: white; border-bottom: none; padding-bottom: 5px;">
         <div style="text-align: center; width: 100%;">
           <div id="rp-details-sender" style="font-size: 16px;"></div>
-          <div style="font-size: 13px; opacity: 0.8;">的红包</div>
+          <div style="font-size: 13px; opacity: 0.8;">'s Red Packet</div>
         </div>
       </div>
       <div class="modal-body" style="padding: 15px;">
         <p id="rp-details-greeting" style="text-align: center; font-size: 20px; color: #333; margin: 0 0 20px 0;"></p>
-        <div id="rp-details-my-amount" style="text-align: center; display: none; margin-bottom: 20px;"> <span style="font-size: 40px; font-weight: bold; color: #E44D44;">0.00</span> <span style="font-size: 18px; color: #E44D44;">元</span> </div>
+        <div id="rp-details-my-amount" style="text-align: center; display: none; margin-bottom: 20px;"> <span style="font-size: 40px; font-weight: bold; color: #E44D44;">0.00</span> <span style="font-size: 18px; color: #E44D44;">CNY</span> </div>
         <div id="rp-details-summary" style="font-size: 13px; color: #8a8a8a; border-top: 1px solid #e0e0e0; padding-top: 10px;"></div>
         <div id="rp-details-list" style="max-height: 150px; overflow-y: auto; margin-top: 10px;"> </div>
       </div>
@@ -3644,7 +3644,7 @@
 <div id="novelai-settings-modal" class="modal" style="display: none;">
     <div class="modal-content" style="max-width: 600px; width: 90%; max-height: 85vh; overflow-y: auto;">
         <div class="modal-header">
-            <span>NovelAI 生成设置</span>
+            <span>NovelAI Generation Settings</span>
             <span class="close" id="close-novelai-settings" style="cursor: pointer; float: right; font-size: 28px; font-weight: bold;">&times;</span>
         </div>
         <div class="modal-body" style="padding: 20px;">
@@ -3690,7 +3690,7 @@
             </div>
 
             <div class="form-group">
-                <label style="color: #333;">采样步数 (Steps)</label>
+                <label style="color: #333;">Sampling Steps</label>
                 <input type="number" id="nai-steps" value="28" min="1" max="50" style="background-color: #f8f9fa; color: #333; border: 1px solid #ccc; padding: 8px; width: 100%; border-radius: 4px;">
                 <small style="color: #666;">Recommended: 28 (higher values improve quality but take longer)</small>
             </div>
@@ -3702,7 +3702,7 @@
             </div>
 
             <div class="form-group">
-                <label style="color: #333;">采样器 (Sampler)</label>
+                <label style="color: #333;">Sampler</label>
                 <select id="nai-sampler" style="background-color: #f8f9fa; color: #333; border: 1px solid #ccc; padding: 8px; width: 100%; border-radius: 4px;">
                     <option value="k_euler">Euler</option>
                     <option value="k_euler_ancestral" selected>Euler Ancestral</option>
@@ -4300,9 +4300,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 </body>
 </html>
-
-
-
 
 
 
