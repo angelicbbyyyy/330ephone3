@@ -1958,6 +1958,17 @@
           </svg> </button> <button id="douban-send-comment-btn" class="comment-send-btn">Send</button>
       </div>
     </div>
+    <div id="x-social-screen" class="screen">
+      <div class="header"> <span class="back-btn" onclick="showScreen('home-screen')">‹</span> <span data-lang-key="homeAppX">X</span>
+        <div class="header-actions"> <span class="action-btn" id="regenerate-x-btn" title="Regenerate Posts"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 11A8.1 8.1 0 0 0 4.5 9M4 5v4h4"></path>
+              <path d="M4 13a8.1 8.1 0 0 0 15.5 2m.5 4v-4h-4"></path>
+            </svg> </span> </div>
+      </div>
+      <div id="x-posts-list" class="list-container">
+        <p style="text-align:center; color: var(--text-secondary); padding: 40px 20px;">No posts yet. Tap the refresh button to generate.</p>
+      </div>
+    </div>
     <div id="werewolf-game-screen" class="screen">
       <div class="header"> <span id="werewolf-game-title">Werewolf</span>
         <div class="header-actions"><span class="action-btn" id="werewolf-retry-btn" title="Retry previous AI action" style="display: none;"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2" stroke-linecap="round"
