@@ -1803,7 +1803,7 @@
         .message-bubble.status-paid .waimai-main .request-title {
             color: #155724;
             font-weight: 600;
-            content: "我已为您买单，请尽情享用吧～" !important;
+            content: "I've paid for you, enjoy!" !important;
             display: block;
             margin-bottom: 15px;
         }
@@ -1827,7 +1827,7 @@
         .message-bubble.status-rejected .waimai-main .request-title {
             color: #721c24;
             font-weight: 600;
-            content: "我拒绝了您的代付请求" !important;
+            content: "I declined your payment request" !important;
             display: block;
             margin-bottom: 15px;
         }
@@ -1845,10 +1845,10 @@
             font-size: 14px; 
         }
         .message-bubble.status-paid .request-title::after {
-            content: "我已为您买单，请尽情享用吧～";
+            content: "I've paid for you, enjoy!";
         }
         .message-bubble.status-rejected .request-title::after {
-            content: "我拒绝了您的代付请求";
+            content: "I declined your payment request";
         }
         .waimai-user-actions {
             display: flex;
