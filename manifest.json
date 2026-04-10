@@ -5,7 +5,7 @@
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#000000",
-  "description": "聊天应用",
+  "description": "Chat App",
   "icons": [
     {
       "src": "https://s3plus.meituan.net/opapisdk/op_ticket_885190757_1758510900942_qdqqd_djw0z2.jpeg",
