@@ -4232,6 +4232,109 @@
 <audio id="silent-audio-player" loop preload="auto" style="position:absolute; width:1px; height:1px; opacity:0.01; overflow:hidden; pointer-events:none; z-index:-1;"></audio>
 
 <script>
+(() => {
+  const setActiveScreen = (screenId) => {
+    const target = document.getElementById(screenId);
+    if (!target) return false;
+
+    document.querySelectorAll('#phone-screen > .screen').forEach((screen) => {
+      screen.classList.remove('active');
+    });
+    target.classList.add('active');
+    return true;
+  };
+
+  const setActiveCharScreen = (screenId) => {
+    const target = document.getElementById(screenId);
+    if (!target) return false;
+
+    setActiveScreen('character-phone-screen');
+    document.querySelectorAll('#character-phone-screen .char-screen').forEach((screen) => {
+      screen.classList.remove('active');
+    });
+    target.classList.add('active');
+    return true;
+  };
+
+  const ensureGlobal = (name, fn) => {
+    if (typeof window[name] !== 'function') {
+      window[name] = fn;
+    }
+  };
+
+  const warnMissingAction = (name) => {
+    console.warn(`[compat] ${name} is not available in this build yet.`);
+    return false;
+  };
+
+  ensureGlobal('showScreen', (screenId) => setActiveScreen(screenId));
+  ensureGlobal('switchToMyPhone', () => setActiveScreen('home-screen'));
+  ensureGlobal('openCharacterSelector', () => setActiveScreen('character-selection-screen'));
+  ensureGlobal('openPresetScreen', () => setActiveScreen('preset-screen'));
+  ensureGlobal('openRenderingRulesScreen', () => setActiveScreen('rendering-rules-screen'));
+  ensureGlobal('openAlipayScreen', () => setActiveScreen('alipay-screen'));
+  ensureGlobal('openAuctionScreen', () => setActiveScreen('auction-screen'));
+  ensureGlobal('openGreenRiverScreen', () => setActiveScreen('green-river-screen'));
+  ensureGlobal('openEmailApp', () => setActiveScreen('email-screen'));
+  ensureGlobal('openFundScreen', () => setActiveScreen('fund-screen'));
+  ensureGlobal('openWerewolfLobby', () => setActiveScreen('werewolf-game-screen'));
+  ensureGlobal('closeEmailDetail', () => setActiveScreen('email-screen'));
+
+  ensureGlobal('switchToCharScreen', (screenId) => setActiveCharScreen(screenId));
+  ensureGlobal('switchToCharHomeScreen', () => setActiveCharScreen('char-home-screen'));
+  ensureGlobal('openCharWallet', () => setActiveCharScreen('char-wallet-screen'));
+  ensureGlobal('closeCharBilibiliPlayer', () => setActiveCharScreen('char-bilibili-screen'));
+  ensureGlobal('openCharApp', (appName) => setActiveCharScreen(`char-${appName}-screen`));
+
+  ensureGlobal('switchFundTab', (tab) => {
+    const isMarket = tab !== 'my';
+    const marketTab = document.getElementById('tab-fund-market');
+    const myTab = document.getElementById('tab-fund-my');
+    const marketList = document.getElementById('fund-market-list');
+    const myList = document.getElementById('fund-my-list');
+
+    if (marketTab) marketTab.classList.toggle('active', isMarket);
+    if (myTab) myTab.classList.toggle('active', !isMarket);
+    if (marketList) marketList.style.display = isMarket ? 'block' : 'none';
+    if (myList) myList.style.display = isMarket ? 'none' : 'block';
+    return true;
+  });
+
+  ensureGlobal('openInventoryModal', () => {
+    const modal = document.getElementById('inventory-modal');
+    if (!modal) return false;
+    modal.classList.add('visible');
+    return true;
+  });
+
+  ensureGlobal('closeInventoryModal', () => {
+    const modal = document.getElementById('inventory-modal');
+    if (!modal) return false;
+    modal.classList.remove('visible');
+    return true;
+  });
+
+  [
+    'addAuthor',
+    'createNewStory',
+    'editBubbleText',
+    'generateNewAuctionItem',
+    'handleFundTradeConfirm',
+    'handleQuickReceiveMail',
+    'handleUserTopUp',
+    'handleWidgetImageChange',
+    'openAuthorManager',
+    'openChapterList',
+    'closeChapterList',
+    'openEmailSettings',
+    'openStorySettings',
+    'placeBid',
+    'refreshFundMarket',
+    'toggleEmailEditMode'
+  ].forEach((name) => ensureGlobal(name, () => warnMissingAction(name)));
+})();
+</script>
+<script>
 document.addEventListener('DOMContentLoaded', () => {
   const applyEnglishUiOverrides = () => {
     const languageSelect = document.getElementById('language-select');
@@ -4316,7 +4419,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 </body>
 </html>
-
 
 
 
