@@ -29,6 +29,7 @@
   <script>
     localStorage.setItem('ephonePinActivated', 'true');
     localStorage.setItem('ephone_saved_uid', 'default');
+    localStorage.setItem('ephone_username', 'User');
     localStorage.setItem('language', 'en');
     
     // Safety fallback just in case the modal tries to show anyway
@@ -41,8 +42,22 @@
     
     // Automatically hide modal via CSS
     const style = document.createElement('style');
-    style.textContent = '#pin-modal-overlay, #login-overlay { display: none !important; }';
+    style.textContent = '#pin-modal-overlay, #login-overlay { display: none !important; } #phone-screen { display: block !important; } #lock-screen { display: none !important; pointer-events: none !important; }';
     document.head.appendChild(style);
+
+    window.addEventListener('load', () => {
+      const phoneScreen = document.getElementById('phone-screen');
+      if (phoneScreen) phoneScreen.style.display = 'block';
+
+      const lockScreen = document.getElementById('lock-screen');
+      if (lockScreen) {
+        lockScreen.style.display = 'none';
+        lockScreen.style.pointerEvents = 'none';
+      }
+
+      const loginOverlay = document.getElementById('login-overlay');
+      if (loginOverlay) loginOverlay.remove();
+    });
   </script>
   <div id="phone-screen">
     <div id="status-bar"> <span id="status-bar-time">12:00</span>
@@ -4301,7 +4316,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 </body>
 </html>
-
 
 
 
